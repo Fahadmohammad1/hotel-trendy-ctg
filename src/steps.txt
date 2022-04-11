@@ -1,0 +1,6 @@
+#steps of firebase authentication
+
+1. npm install firebase
+2. initialize firebase app
+3. get auth from firebase and export it
+4. go to authentication and add sign-in method
