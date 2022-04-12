@@ -1,19 +1,19 @@
-import React from "react";
 import { Button, Form } from "react-bootstrap";
-//
-// import { useAuthState } from "react-firebase-hooks/auth";
-import useFirebase from "../../Hooks/useFirebase";
+// import useFirebase from "../../Hooks/useFirebase";
 
 const Login = () => {
-  const { handleGoogleLogin } = useFirebase();
-
+  // const { handleGoogleLogin } = useFirebase();
   return (
     <div className="w-75 mx-auto mt-4">
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              // onBlur={handleEmailBlur}
+              type="email"
+              placeholder="Enter email"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -34,10 +34,7 @@ const Login = () => {
           <hr />
         </h6>
       </div>
-      <button
-        onClick={handleGoogleLogin}
-        className="w-100 w-lg-50 btn btn-outline-warning text-dark"
-      >
+      <button className="w-100 w-lg-50 btn btn-outline-warning text-dark">
         Login with Google
       </button>
     </div>

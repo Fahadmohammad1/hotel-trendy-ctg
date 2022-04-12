@@ -31,9 +31,7 @@ const useFirebase = () => {
 
   const handleSignOut = () => {
     signOut(auth)
-      .then(() => {
-        setUser({});
-      })
+      .then(() => {})
       .catch((error) => {});
   };
 

@@ -4,3 +4,5 @@
 2. initialize firebase app
 3. get auth from firebase and export it
 4. go to authentication and enable sign-in method
+5. create use firebase hooks and impliment google sign in 
+6. set OnAuthStateChanged to get current user
