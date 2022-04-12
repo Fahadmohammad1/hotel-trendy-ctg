@@ -1,21 +1,11 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import auth from "../../firebase.init";
+//
+// import { useAuthState } from "react-firebase-hooks/auth";
+import useFirebase from "../../Hooks/useFirebase";
 
 const Login = () => {
-  const googleProvider = new GoogleAuthProvider();
-
-  const handleGoogleLogin = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  const { handleGoogleLogin } = useFirebase();
 
   return (
     <div className="w-75 mx-auto mt-4">
@@ -46,7 +36,7 @@ const Login = () => {
       </div>
       <button
         onClick={handleGoogleLogin}
-        className="w-100 btn-outline-warning text-dark"
+        className="w-100 w-lg-50 btn btn-outline-warning text-dark"
       >
         Login with Google
       </button>
