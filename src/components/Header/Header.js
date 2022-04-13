@@ -32,6 +32,15 @@ const Header = () => {
                 Home
               </NavLink>
               <NavLink
+                className="navlink text-white"
+                to="#"
+                // style={({ isActive }) =>
+                //   isActive ? { color: "red" } : { color: "white" }
+                // }
+              >
+                Services
+              </NavLink>
+              <NavLink
                 className="navlink"
                 to="/Checkout"
                 style={({ isActive }) =>
@@ -60,6 +69,15 @@ const Header = () => {
                 }
               >
                 Register
+              </NavLink>
+              <NavLink
+                className="navlink"
+                to="/about"
+                style={({ isActive }) =>
+                  isActive ? { color: "red" } : { color: "white" }
+                }
+              >
+                About
               </NavLink>
             </Nav>
           </Navbar.Collapse>
